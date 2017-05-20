@@ -16,7 +16,7 @@ Current application is a test issue.
 1. First clone the repository
 2. npm i
 3. bower i
-4. start local web server listening 9000 port ('http-server [path] p 9000')
+4. start local web server listening 9000 port ('http-server [path] -p 9000')
 5. Application will available on 'http://localhost:9000/'  
 
 

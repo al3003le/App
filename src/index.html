@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+    <title>App - {{'TITLE' | translate }}</title>
+    <!--<Deject>-->
+    <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!--</Deject>-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- inject:css -->
+  	<!-- endinject -->
+</head>
+<body>
+	<div class="container">
+
+		<language></language>
+		
+		<h3>{{'TITLE' | translate }}</h3>
+		<div ui-view></div>
+
+	</div>
+	<!-- inject:js -->
+  	<!-- endinject -->
+
+  	<!--<Deject>-->
+  	<script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
+	<script type="text/javascript" src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+	<script type="text/javascript" src="bower_components/angular-translate/angular-translate.min.js"></script>
+	
+	<script type="text/javascript" src="app/app.js"></script>
+	<script type="text/javascript" src="app/common/app-config.js"></script>
+	
+	<script type="text/javascript" src="app/note/note-service.js"></script>
+	
+	<script type="text/javascript" src="app/note/note-controller.js"></script>
+	<script type="text/javascript" src="app/translate/translate-controller.js"></script>
+
+	<script type="text/javascript" src="app/note/components/note-list.component.js"></script>
+	<script type="text/javascript" src="app/translate/translate-component.js"></script>
+	<!--</Deject>-->
+</body>
+</html>

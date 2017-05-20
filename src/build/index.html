@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+    <title>App - {{'TITLE' | translate }}</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- inject:css -->
+  	<link rel="stylesheet" href="/css/css-vendors.min.css">
+  	<!-- endinject -->
+</head>
+<body>
+	<div class="container">
+
+		<language></language>
+		
+		<h3>{{'TITLE' | translate }}</h3>
+		<div ui-view></div>
+
+	</div>
+	<!-- inject:js -->
+  	<script src="/js/all-vendors.min.js"></script>
+  	<script src="/js/all.min.js"></script>
+  	<!-- endinject -->
+
+  	
+</body>
+</html>

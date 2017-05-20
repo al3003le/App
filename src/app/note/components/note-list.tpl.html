@@ -1,0 +1,20 @@
+<div ng-show="showEdit && selectNote || showAdd">
+    <div class="form field">
+        <span>Id:</span> <span>{{selectNote.id?selectNote.id+'.':'-'}}</span><br> 
+        <span>Title:</span> <input type="text" name="title" ng-model="selectNote.title" />
+    </div>
+    <button ng-click="noteController.saveNote(selectNote)" class="btn btn-link btn-md">save</button>
+</div>
+<div class="row">
+	<button id='add-btn' ng-click='noteController.addNote()' ng-show="!showEdit && !showAdd" class="btn btn-link btn-md">add</button>
+	<span ng-show = 'loading' class="text-info" >loading...</span>
+</div>
+<div class="row">
+	<ul>
+		<li ng-repeat='note in notes | orderBy: id'>
+			<button ng-click='noteController.editNote(note)' class="btn btn-link btn-md edit">edit</button> 
+			<button ng-click='noteController.removeNote(note.id)' class="btn btn-link btn-md del">del</button>
+			<a ng-href="/#!/note/{{note.id}}"><span>{{note.id}}. {{note.title}}</span></a>
+		</li>
+	</ul>
+</div>
